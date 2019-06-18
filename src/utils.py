@@ -109,7 +109,8 @@ def setup_data(args):
                       for x in ['train', 'val']}
     dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x],
                                                   batch_size=args.batch_size,
-                                                  shuffle=True)
+                                                  shuffle=False)
+                                                  #shuffle=True)
                    for x in ['train', 'val']}
 
     return image_datasets, dataloaders
